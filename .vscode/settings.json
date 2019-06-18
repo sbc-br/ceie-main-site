@@ -1,0 +1,29 @@
+{
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/storage": true,
+    "**/vendor": true,
+    "**/bootstrap": true
+  },
+  "search.exclude": {
+    "bootstrap": true,
+    "storage": true,
+    "vendor": true
+  },
+  "files.exclude": {
+    "vendor": true,
+    "yarn.lock": true,
+    "artisan": true,
+    "server.php": true,
+    ".env.example": true,
+    ".styleci.yml": true,
+    ".editorconfig": true,
+    "storage": true,
+    ".gitattributes": true,
+    "composer.lock": true,
+    "package-lock.json": true,
+    "node_modules": true
+  }
+}

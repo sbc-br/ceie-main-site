@@ -24,6 +24,7 @@
     ".gitattributes": true,
     "composer.lock": true,
     "package-lock.json": true,
-    "node_modules": true
+    "node_modules": true,
+    "bootstrap": true
   }
 }

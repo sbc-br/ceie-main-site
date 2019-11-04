@@ -31,55 +31,7 @@ class News
             'keywords' => 'Alexandre Direne, Homenagem',
             'publicationDate' => '01/12/2019',
             'endPoint' => 'homenagem-prof-alexandre-direne'
-        ],
-        [
-            'id' => 3,
-            'title' => 'Notícia 3',
-            'summary' => 'Maecenas rutrum viverra sapien sed ferm entum. Morbi tempor odio eget lacus tempus pulvinar.',
-            'keywords' => '',
-            'publicationDate' => '23/08/2019',
-            'endPoint' => '3'
-        ],
-        [
-            'id' => 4,
-            'title' => 'Notícia 4',
-            'summary' => 'Maecenas rutrum viverra sapien sed ferm entum. Morbi tempor odio eget lacus tempus pulvinar.',
-            'keywords' => '',
-            'publicationDate' => '23/08/2019',
-            'endPoint' => '4'
-        ],
-        [
-            'id' => 5,
-            'title' => 'Notícia 5',
-            'summary' => 'Maecenas rutrum viverra sapien sed ferm entum. Morbi tempor odio eget lacus tempus pulvinar.',
-            'keywords' => '',
-            'publicationDate' => '08/08/2019',
-            'endPoint' => '5'
-        ],
-        [
-            'id' => 6,
-            'title' => 'Notícia 6',
-            'summary' => 'Maecenas rutrum viverra sapien sed ferm entum. Morbi tempor odio eget lacus tempus pulvinar.',
-            'keywords' => '',
-            'publicationDate' => '15/08/2019',
-            'endPoint' => '6'
-        ],
-        [
-            'id' => 7,
-            'title' => 'Notícia 7',
-            'summary' => 'Maecenas rutrum viverra sapien sed ferm entum. Morbi tempor odio eget lacus tempus pulvinar.',
-            'keywords' => '',
-            'publicationDate' => '19/08/2019',
-            'endPoint' => '7'
-        ],
-        [
-            'id' => 8,
-            'title' => 'Notícia 8',
-            'summary' => 'Maecenas rutrum viverra sapien sed ferm entum. Morbi tempor odio eget lacus tempus pulvinar.',
-            'keywords' => '',
-            'publicationDate' => '12/09/2019',
-            'endPoint' => '8'
-        ],
+        ]
     ];
 
     public $id;

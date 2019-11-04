@@ -2,24 +2,23 @@
 
 @section('styles')
 
-<link rel="stylesheet" type="text/css" href="{{ URL::asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ URL::asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ URL::asset('plugins/video-js/video-js.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" integrity="sha256-h7NPLBxMMPcEeO/BDGwCb5MRAZ8CgVcxRxfm3fpMH0s=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" integrity="sha256-KWs9jp+jZzOZmmnW5jC8Y2HqI9rajJig5I00un99DtI=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.0.0-rc.1/video-js.min.css" integrity="sha256-rDQT4VncQ+2SzFGAWVzHW65OlecioCEQDAiY2ZIvi5Y=" crossorigin="anonymous" />
 
 @endsection
 
 @section('scripts')
 
-<script src="{{ URL::asset('plugins/greensock/TweenMax.min.js') }}"></script>
-<script src="{{ URL::asset('plugins/greensock/TimelineMax.min.js') }}"></script>
-<script src="{{ URL::asset('plugins/scrollmagic/ScrollMagic.min.js') }}"></script>
-<script src="{{ URL::asset('plugins/greensock/animation.gsap.min.js') }}"></script>
-<script src="{{ URL::asset('plugins/greensock/ScrollToPlugin.min.js') }}"></script>
-<script src="{{ URL::asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
-<script src="{{ URL::asset('plugins/easing/easing.js') }}"></script>
-<script src="{{ URL::asset('plugins/video-js/video.min.js') }}"></script>
-<script src="{{ URL::asset('plugins/video-js/Youtube.min.js') }}"></script>
-<script src="{{ URL::asset('plugins/parallax-js-master/parallax.min.js') }}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.0.0-rc.1/video.min.js" integrity="sha256-f6NDQ36ef6RJagoWHxh7ZZyUlt3a50VTB9ZkZLzrqwU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.0/Youtube.js" integrity="sha256-+t06TGT33gK9VlGrxFAvlvkpiVXmkV3mpf0a552YYWw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js" integrity="sha256-+bwq8Vn1b2Nz1mF35GyYCR3WP1zNBq6AX9P+rIR/vg8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js" integrity="sha256-/6NS53KuMVgzxQozkNjhDjwcyDmv8Sk52zodr91uoo4=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js" integrity="sha256-s5TTOyp+xlSmsDfr/aZhg0Gz+JejYr5iTJI8JxG1SkM=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js" integrity="sha256-Jhqqct9kdspgS5FC1W1f/cBOkdDoWMV3eWhU14cqzoY=" crossorigin="anonymous"></script>
 
 <script src="{{ URL::asset('scripts/news.js') }}"></script>
 

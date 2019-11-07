@@ -30,8 +30,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 
 
     @yield('styles')
@@ -70,7 +72,7 @@
 
                                 <nav class="main_nav_contaner ml-auto">
                                     <ul class="main_nav">
-                                        <li><a href="/">Início</a></li>
+                                        <li class="active"><a href="/">Início</a></li>
                                         <li><a href="/news">Notícias</a></li>
                                         <li><a href="/documents">Documentos</a></li>
                                         <li><a href="/links">Links</a></li>
@@ -112,98 +114,73 @@
             </nav>
         </div>
 
-        <!-- Content -->
-
-        @yield('content')
-
-        {{-- <!-- Join -->
-
-        <div class="join">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="section_title text-center">
-                            <h2>Join Our Platform Today</h2>
+        <div class="home">
+            <!-- Background image artist https://unsplash.com/@thepootphotographer -->
+            <div class="home_background parallax_background parallax-window" data-parallax="scroll"
+                data-image-src="{{ URL::asset('images/other/about.jpg') }}" data-speed="0.8"></div>
+            <div class="home_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="home_content text-center">
+                                <div class="home_title">Bem vindo ao portal da CEIE</div>
+                            </div>
                         </div>
-                        <div class="section_subtitle">Suspendisse tincidunt magna eget massa hendrerit efficitur. Ut
-                            euismod pellentesque imperdiet. Cras laoreet gravida lectus, at viverra lorem venenatis in.
-                            Aenean id varius quam. Nullam bibendum interdum dui, ac tempor lorem convallis ut</div>
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
+
+        <!-- Content -->
+
+        @yield('content')
 
         <!-- Footer -->
 
         <footer class="footer">
             <div class="container">
                 <div class="row">
-
-                    <div class="col-lg-8 footer_col">
-                        <div class="footer_contact">
-                            <div class="footer_title">Contato</div>
-                            <div class="footer_contact_info">
-                                <div class="footer_contact_item">
-                                    <div class="footer_contact_title">Endereço:</div>
-                                    <div class="footer_contact_line">
-                                        Av. Bento Gonçalves, 9500 | Setor 4 | Prédio 43.412 | Sala 219 |
-                                        Bairro Agronomia Caixa Postal 15012 | CEP 91501-970 Porto Alegre - RS
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 footer_col">
-                        <div class="footer_contact">
-                            <div class="footer_title">&nbsp;</div>
-                            <div class="footer_contact_info">
-                                <div class="footer_contact_item">
-                                    <div class="footer_contact_title">Telefone:</div>
-                                    <div class="footer_contact_line">(51) 3308-6835</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-1 footer_col">
-                        <div class="footer_contact">
-                            <div class="footer_title">&nbsp;</div>
-                            <div class="footer_contact_info">
-                                <div class="footer_contact_item">
-                                    <div class="footer_contact_title">Email:</div>
-                                    <div class="footer_contact_line">sbc@sbc.org.br</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="col-lg-12 footer_col">
                         <div class="copyright">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;
                             <script>
                                 document.write(new Date().getFullYear());
-                            </script> -
-                            <a href="https://www.sbc.org.br/" target="_blank">www.sbc.org.br</a>.
-                            Todos os direitos reservados. | Este site foi feito com um modelo da
-                            <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            </script> - Todos os direitos reservados para a <a href="https://www.sbc.org.br/"
+                                target="_blank">Sociedade Brasileira de Computação</a>
+                            {{-- (<a href="https://www.sbc.org.br/" target="_blank">www.sbc.org.br</a>) --}}
+
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            <div>
+                                Esta página foi desenvolvida com base em um modelo da <a href="https://colorlib.com"
+                                    target="_blank">Colorlib</a> |
+                                Ícones criados por <a href="https://www.flaticon.com/authors/vectors-market"
+                                    title="Vectors Market" target="_blank">Vectors Market</a> em <a
+                                    href="https://www.flaticon.com/" target="_blank"
+                                    title="Flaticon">www.flaticon.com</a>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
         </footer>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"
+        integrity="sha256-+bwq8Vn1b2Nz1mF35GyYCR3WP1zNBq6AX9P+rIR/vg8=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"
+        integrity="sha256-/6NS53KuMVgzxQozkNjhDjwcyDmv8Sk52zodr91uoo4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"
+        integrity="sha256-Jhqqct9kdspgS5FC1W1f/cBOkdDoWMV3eWhU14cqzoY=" crossorigin="anonymous"></script>
 
     <script src="{{ URL::asset('scripts/menu.js') }}"></script>
 
     @yield('scripts')
-
 
 </body>
 

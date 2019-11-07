@@ -4,18 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\News;
+use App\Staff;
 
 class HomeController extends Controller
 {
     public function show()
     {
         $lastNews = News::findLast();
+        $currentStaff = Staff::findCurrent();
         $pageData = $this->getPageData();
 
         $variables = [
 
             'page'  =>  $pageData,
-            'news'  =>  $lastNews
+            'news'  =>  $lastNews,
+            'staff' =>  $currentStaff
         ];
 
         return view('home', $variables);

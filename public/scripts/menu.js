@@ -8,27 +8,7 @@ $(document).ready(function()
 	var header = $('.header');
 	var burger = $('.hamburger');
 
-	setHeader();
-
-	$(window).on('resize', function()
-	{
-		setHeader();
-	});
-
 	initMenu();
-
-	function setHeader()
-	{
-		if($(window).scrollTop() > 100)
-		{
-			header.addClass('scrolled');
-		}
-		else
-		{
-			header.removeClass('scrolled');
-		}
-	}
-
 
 	function initMenu()
 	{

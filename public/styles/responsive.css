@@ -134,7 +134,7 @@
 	}
 	.home_title
 	{
-		font-size: 56px;
+		font-size: 30pt;
 	}
 	.course_search
 	{
@@ -213,6 +213,14 @@
 	.video_container_outer
 	{
 		height: 287px;
+    }
+    .home
+	{
+		height: 370px;
+	}
+	.home_title
+	{
+		font-size: 30pt;
 	}
 }
 
@@ -324,7 +332,21 @@
 		-ms-transform: translateY(-1px);
 		-o-transform: translateY(-1px);
 		transform: translateY(-1px);
+    }
+
+    /* .home
+	{
+		height: 260px;
 	}
+	.home_container
+	{
+		bottom: 71px;
+	}
+	.home_title
+	{
+		font-size: 24px;
+	} */
+
 	.home_container
 	{
 		top: calc((100vh + 37px) / 2);

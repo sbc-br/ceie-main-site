@@ -116,7 +116,7 @@
 
         @yield('content')
 
-        <!-- Join -->
+        {{-- <!-- Join -->
 
         <div class="join">
             <div class="container">
@@ -131,7 +131,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <!-- Footer -->
 

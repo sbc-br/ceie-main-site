@@ -158,7 +158,7 @@
                     </div>
                     <div class="teacher_body text-center">
                         <div class="teacher_title">{{ $theStaff->name }}</div>
-                        <div class="teacher_subtitle">{{ $theStaff->short_institution_name }}</div>
+                        <div class="teacher_subtitle"><a href="{{ $theStaff->institution->homePage }}" target="_blank" title="Accessar home page da {{ $theStaff->institution->name }}">{{ $theStaff->institution->shortName }}</a></div>
                         <div class="teacher_subtitle">{{ $theStaff->role }}</div>
                     </div>
                 </div>

@@ -2,8 +2,8 @@
 
 namespace App;
 
-use DateTime;
 use URL;
+use App\Institution;
 
 class Staff
 {
@@ -13,105 +13,105 @@ class Staff
             'name' => 'Sérgio Crespo',
             'role' => 'Coordenador',
             'year' => 2019,
-            'short_institution_name' => 'UFF'
+            'institution_id' => 1
         ],
         [
             'id' => 2,
             'name' => 'Thais Castro',
             'role' => 'Vice-coordenadora',
             'year' => 2019,
-            'short_institution_name' => 'UFAM'
+            'institution_id' => 2
         ],
         [
             'id' => 3,
             'name' => 'Eleandro Maschio',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UTFPR'
+            'institution_id' => 3
         ],
         [
             'id' => 4,
             'name' => 'Tiago Primo',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFPel'
+            'institution_id' => 4
         ],
         [
             'id' => 5,
             'name' => 'Carlos Roberto Lopes',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFU'
+            'institution_id' => 5
         ],
         [
             'id' => 6,
             'name' => 'Crediné de Menezes',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFRGS'
+            'institution_id' => 6
         ],
         [
             'id' => 7,
             'name' => 'Esdras Bispo',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFG'
+            'institution_id' => 7
         ],
         [
             'id' => 8,
             'name' => 'Fabiano Azevedo Dorça',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFU'
+            'institution_id' => 5
         ],
         [
             'id' => 9,
             'name' => 'Márcia Aparecida Fernandes',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFU'
+            'institution_id' => 5
         ],
         [
             'id' => 10,
             'name' => 'Patrícia Jaques',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'Unisinos'
+            'institution_id' => 8
         ],
         [
             'id' => 11,
             'name' => 'Patrícia Cabral Tedesco',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFPE'
+            'institution_id' => 9
         ],
         [
             'id' => 12,
             'name' => 'Sean Siqueira',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UNIRIO'
+            'institution_id' => 10
         ],
         [
             'id' => 13,
             'name' => 'Alex Sandro Gomes',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFPE'
+            'institution_id' => 9
         ],
         [
             'id' => 14,
             'name' => 'José Aires de Castro Filho',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFC'
+            'institution_id' => 11
         ],
         [
             'id' => 15,
             'name' => 'Thiago S. Barcelos',
             'role' => 'Integrante do Comitê Gestor',
             'year' => 2019,
-            'short_institution_name' => 'UFSP'
+            'institution_id' => 12
         ]
     ];
 
@@ -119,7 +119,7 @@ class Staff
     public $name;
     public $role;
     public $year;
-    public $short_institution_name;
+    public $institution;
 
     public function __construct($data)
     {
@@ -127,7 +127,7 @@ class Staff
         $this->name = $data['name'];
         $this->role = $data['role'];
         $this->year = $data['year'];
-        $this->short_institution_name = $data['short_institution_name'];
+        $this->institution = Institution::find($data['institution_id']);
         $this->thumbnail = URL::asset('images/staff/staff_'.$this->id.'.jpg');
     }
 

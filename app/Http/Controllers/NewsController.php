@@ -31,7 +31,7 @@ class NewsController extends Controller
             'theNews'   => $theNews
         ];
 
-        return view('news/news' . $theNews->id, $variables);
+        return view('news/news_' . $theNews->id, $variables);
     }
 
     public function getIndexPageData()

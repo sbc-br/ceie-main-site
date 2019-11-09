@@ -58,11 +58,11 @@
                                         alt="{{ $theNews->summary }}"></div>
                                 <div class="course_body">
                                     <div class="course_title">
-                                        <h4>{{ $theNews->title }}</h4>
+                                        <a href="/news/{{ $theNews->endPoint }}" title="Clique aqui para ler esta notícia"><h4>{{ $theNews->title }}</h4></a>
                                     </div>
                                     <div class="course_text">{{ $theNews->summary }} [...]</div>
                                     <div class="course_footer d-flex align-items-center justify-content-end">
-                                        <a href="/news/{{ $theNews->endPoint }}">Ler esta notícia</a>
+                                        <a href="/news/{{ $theNews->endPoint }}" title="Clique aqui para ler esta notícia">Ler esta notícia <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -153,11 +153,13 @@
             <!-- Teachers -->
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="teacher">
-                    <div class="teacher_image"><img src="{{ $theStaff->thumbnail }}"
-                            alt="https://unsplash.com/@rawpixel">
-                    </div>
+                        <a href="http://lattes.cnpq.br/{{ $theStaff->lattesId }}" target="_blank" title="Acessar o currículo Lattes de {{ $theStaff->name }}">
+                            <div class="teacher_image">
+                                <img src="{{ $theStaff->thumbnail }}" alt="https://unsplash.com/@rawpixel">
+                            </div>
+                        </a>
                     <div class="teacher_body text-center">
-                        <div class="teacher_title">{{ $theStaff->name }}</div>
+                    <div class="teacher_title"><a href="http://lattes.cnpq.br/{{ $theStaff->lattesId }}" target="_blank" title="Acessar o currículo Lattes de {{ $theStaff->name }}">{{ $theStaff->name }}</a></div>
                         <div class="teacher_subtitle"><a href="{{ $theStaff->institution->homePage }}" target="_blank" title="Accessar home page da {{ $theStaff->institution->name }}">{{ $theStaff->institution->shortName }}</a></div>
                         <div class="teacher_subtitle">{{ $theStaff->role }}</div>
                     </div>

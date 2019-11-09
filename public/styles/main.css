@@ -2028,6 +2028,10 @@ section
 	width: 100%;
 	margin-bottom: 30px;
 }
+.teacher a
+{
+    font-weight: 600;
+}
 .teacher_image
 {
     width: 100%;

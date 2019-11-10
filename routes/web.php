@@ -19,3 +19,6 @@ Route::group(['prefix' => 'news'], function ()
 
     Route::get('/{endPoint}', ['uses' => 'NewsController@showByEndPoint']);
 });
+
+
+Route::get('/email', 'MailController@send');

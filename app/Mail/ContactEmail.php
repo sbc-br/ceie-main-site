@@ -41,7 +41,6 @@ class ContactEmail extends Mailable implements ShouldQueue
         return $this->view('emails.contact')
             ->from(Config::get('mail.from.address'))
             ->to($this->admin->email)
-            ->subject($this->guest->message->subject)
-            ->replyTo($this->guest->email);
+            ->subject($this->guest->message->subject);
     }
 }

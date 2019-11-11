@@ -1,25 +1,28 @@
 @extends('news.base')
 
 @section('news-content')
-
 <div class="row">
     <div class="col-lg-7">
         <p>
-            No CBIE 2018, na quarta, 31/out, 18:00, haverá o lançamento da Série de Livros de Metodologia de
-            Pesquisa em Informática na Educação, uma iniciativa da CEIE/SBC.
+            O Congresso Brasileiro de Informática da Educação (CBIE) é um evento anual da SBC,
+            de caráter internacional, que busca promover e incentivar as trocas de experiências
+            entre as comunidades científica, profissional, governamental e empresarial na área
+            de Informática na Educação. Assim, visa a promoção de discussões e soluções para
+            melhorias na educação com o apoio de Tecnologia da Informação e Comunicação (TIC).
+        </p>
+
+        <p>
+            Em 2018, o CBIE será realizado nos dias 29 de outubro a 01 de novembro de 2018, no hotel
+            Oásis Atlântico, Fortaleza/CE. O tema será: Informática na Educação - Educação e Empreendedorismo
         </p>
         <p>
-            Essa é uma série de livros sobre metodologia de pesquisa voltada especificamente à comunidade
-            de informática na educação e totalmente disponível online.
+            Para maiores informações acesse: <a href="http://cbie2018.virtual.ufc.br" target="_blank">http://cbie2018.virtual.ufc.br</a>
         </p>
-        <p>Acesse a série de livros em <a href="https://metodologia.ceie-br.org" target="_blank">https://metodologia.ceie-br.org</a></p>
     </div>
     <div class="col-lg-5">
         <div class="text-center">
-            <img class="rounded" src="{{ $theNews->thumbnail }}" width="100%">
+            <img class="rounded" src="{{ URL::asset('images/news/'.$theNews->id.'/picture-0.png') }}" width="100%">
         </div>
     </div>
 </div>
-
-
 @endsection

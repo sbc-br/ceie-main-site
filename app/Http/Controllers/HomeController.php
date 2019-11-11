@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\News;
-use App\Staff;
+use App\Portal;
 
 class HomeController extends Controller
 {
     public function show()
     {
         $lastNews = News::findLast(6);
-        $currentStaff = Staff::findCurrent();
+        $ceiePortal = Portal::findByNameIgnoreCase('ceie');
         $pageData = $this->getPageData();
 
         $variables = [
@@ -19,7 +19,7 @@ class HomeController extends Controller
             'page'  =>  $pageData,
             'news'  =>  $lastNews,
             'newsFixBorder' => [4],
-            'staff' =>  $currentStaff
+            'ceiePortal' =>  $ceiePortal
         ];
 
         return view('home', $variables);

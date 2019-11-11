@@ -7,9 +7,9 @@ use URL;
 
 class News
 {
-    private static $news = [
+    private static $allNewsData = [
         [
-            'id' => 2,
+            'id' => 1,
             'title' => 'Lançamento de Livros',
             'summary' => 'No CBIE 2018, na quarta, 31/out, 18:00, haverá o lançamento da Série de Livro de Metodologia de Pesquisa',
             'keywords' => 'Livros, Educação, Pesquisa, CBIE',
@@ -17,7 +17,7 @@ class News
             'endPoint' => 'lancamento-livros-ie-2018'
         ],
         [
-            'id' => 1,
+            'id' => 2,
             'title' => 'CBIE 2018',
             'summary' => 'O CBIE 2018 será realizado nos dias 29 de outubro a 01 de novembro de 2018, no hotel Oásis Atlântico',
             'keywords' => 'CBIE, Congresso',
@@ -47,71 +47,65 @@ class News
     public $summary;
     public $publicationDate;
     public $endPoint;
-    public $description;
     public $keywords;
 
-    public function __construct($data)
+    public function __construct($singleNewsData)
     {
-        $this->id = $data['id'];
-        $this->title = $data['title'];
-        $this->summary = $data['summary'];
-        $this->publicationDate = DateTime::createFromFormat('d/m/Y', $data['publicationDate']);
-        $this->endPoint = $data['endPoint'];
-        $this->keywords = $data['keywords'];
+        $this->id = $singleNewsData['id'];
+        $this->title = $singleNewsData['title'];
+        $this->summary = $singleNewsData['summary'];
+        $this->publicationDate = DateTime::createFromFormat('d/m/Y', $singleNewsData['publicationDate']);
+        $this->endPoint = $singleNewsData['endPoint'];
+        $this->keywords = $singleNewsData['keywords'];
         $this->thumbnail = URL::asset('images/news/'.$this->id.'/thumbnail.jpg');
-    }
-
-    private static function getData()
-    {
-        $data = [];
-
-        foreach (self::$news as $theNews)
-        {
-            array_push($data, new News($theNews));
-        }
-
-        usort($data, function($a, $b){
-            return $b->publicationDate->getTimestamp() - $a->publicationDate->getTimestamp();
-        });
-
-        return $data;
     }
 
     public static function all()
     {
-        return self::getData();
+        $allNews = [];
+
+        foreach (self::$allNewsData as $singleNewsData)
+        {
+            array_push($allNews, new News($singleNewsData));
+        }
+
+        usort($allNews, function($a, $b){
+            return $b->publicationDate->getTimestamp() - $a->publicationDate->getTimestamp();
+        });
+
+        return $allNews;
     }
 
     public static function find($id)
     {
-        $data = self::getData();
+        $allNews = self::all();
 
-        foreach ($data as $theNews)
+        foreach ($allNews as $singleNews)
         {
-            if ($theNews->id == $id)
+            if ($singleNews->id == $id)
             {
-                return $theNews;
+                return $singleNews;
             }
         }
     }
 
     public static function findLast($count = 3)
     {
-        $data = self::getData();
-        $data = array_slice($data, 0, $count);
+        $allNews = self::all();
+        $lastNews = array_slice($allNews, 0, $count);
 
-        return $data;
+        return $lastNews;
     }
 
     public static function findByEndPoint($endPoint)
     {
-        $data = self::getData();
+        $allNews = self::all();
 
-        foreach ($data as $theNews)
+        foreach ($allNews as $singleNews)
         {
-            if ($theNews->endPoint == $endPoint)
+            if ($singleNews->endPoint == $endPoint)
             {
-                return $theNews;
+                return $singleNews;
             }
         }
     }

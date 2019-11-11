@@ -64,4 +64,25 @@ class NewsController extends Controller
 
         return $data;
     }
+
+    public function findAll()
+    {
+        $allNews = News::all();
+
+        return response()->json($allNews);
+    }
+
+    public function find($id)
+    {
+        $singleNews = News::find($id);
+
+        return response()->json($singleNews);
+    }
+
+    public function findLast($count)
+    {
+        $lastNews = News::findLast($count);
+
+        return response()->json($lastNews);
+    }
 }

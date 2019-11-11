@@ -119,7 +119,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col text-center">
+            <div class="col text-right">
                 <div class="button"><a href="{{ URL::asset('files/RegimentoCEIE2013-vf.pdf') }}" target="_blank">Ler
                         regimento<div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
                     </a></div>
@@ -150,26 +150,26 @@
         <div class="row teachers_row">
 
             <!-- Teacher -->
-            @foreach ($staff as $theStaff)
+            @foreach ($ceiePortal->currentCommittee()->members as $member)
 
             <!-- Teachers -->
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="teacher">
-                    <a href="http://lattes.cnpq.br/{{ $theStaff->lattesId }}" target="_blank"
-                        title="Acessar o currículo Lattes de {{ $theStaff->name }}">
+                    <a href="http://lattes.cnpq.br/{{ $member->user->lattesId }}" target="_blank"
+                        title="Acessar o currículo Lattes de {{ $member->user->name }}">
                         <div class="teacher_image">
-                            <img src="{{ $theStaff->thumbnail }}" alt="https://unsplash.com/@rawpixel">
+                            <img src="{{ $member->user->thumbnail }}" alt="https://unsplash.com/@rawpixel">
                         </div>
                     </a>
                     <div class="teacher_body text-center">
-                        <div class="teacher_title"><a href="http://lattes.cnpq.br/{{ $theStaff->lattesId }}"
+                        <div class="teacher_title"><a href="http://lattes.cnpq.br/{{ $member->user->lattesId }}"
                                 target="_blank"
-                                title="Acessar o currículo Lattes de {{ $theStaff->name }}">{{ $theStaff->name }}</a>
+                                title="Acessar o currículo Lattes de {{ $member->user->name }}">{{ $member->user->name }}</a>
                         </div>
-                        <div class="teacher_subtitle"><a href="{{ $theStaff->institution->homePage }}" target="_blank"
-                                title="Accessar home page da {{ $theStaff->institution->name }}">{{ $theStaff->institution->shortName }}</a>
+                        <div class="teacher_subtitle"><a href="{{ $member->user->institution->homePage }}" target="_blank"
+                                title="Accessar home page da instituição {{ $member->user->institution->name }}">{{ $member->user->institution->shortName }}</a>
                         </div>
-                        <div class="teacher_subtitle">{{ $theStaff->role }}</div>
+                        <div class="teacher_subtitle">{{ $member->role->title }}</div>
                     </div>
                 </div>
             </div>

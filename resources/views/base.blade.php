@@ -161,7 +161,27 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </footer>
+    </div>
+
+    <div class="modal" id="app-modal-dialog" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal title</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
@@ -178,6 +198,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"
         integrity="sha256-Jhqqct9kdspgS5FC1W1f/cBOkdDoWMV3eWhU14cqzoY=" crossorigin="anonymous"></script>
 
+    <script>
+        var baseUrl = '{{ URL::to('/') }}';
+    </script>
     <script src="{{ URL::asset('scripts/menu.js') }}"></script>
 
     @yield('scripts')

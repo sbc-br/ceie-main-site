@@ -6,24 +6,16 @@
     integrity="sha256-h7NPLBxMMPcEeO/BDGwCb5MRAZ8CgVcxRxfm3fpMH0s=" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css"
     integrity="sha256-KWs9jp+jZzOZmmnW5jC8Y2HqI9rajJig5I00un99DtI=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.0.0-rc.1/video-js.min.css"
-    integrity="sha256-rDQT4VncQ+2SzFGAWVzHW65OlecioCEQDAiY2ZIvi5Y=" crossorigin="anonymous" />
 
 @endsection
 
 @section('scripts')
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.0.0-rc.1/video.min.js"
-    integrity="sha256-f6NDQ36ef6RJagoWHxh7ZZyUlt3a50VTB9ZkZLzrqwU=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-youtube/2.6.0/Youtube.js"
-    integrity="sha256-+t06TGT33gK9VlGrxFAvlvkpiVXmkV3mpf0a552YYWw=" crossorigin="anonymous"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"
     integrity="sha256-s5TTOyp+xlSmsDfr/aZhg0Gz+JejYr5iTJI8JxG1SkM=" crossorigin="anonymous"></script>
 
-
 <script src="{{ URL::asset('scripts/news.js') }}"></script>
+<script src="{{ URL::asset('scripts/mail.js') }}"></script>
 
 @endsection
 
@@ -58,11 +50,16 @@
                                         alt="{{ $theNews->summary }}"></div>
                                 <div class="course_body">
                                     <div class="course_title">
-                                        <a href="/news/{{ $theNews->endPoint }}" title="Clique aqui para ler esta notícia"><h4>{{ $theNews->title }}</h4></a>
+                                        <a href="/news/{{ $theNews->endPoint }}"
+                                            title="Clique aqui para ler esta notícia">
+                                            <h4>{{ $theNews->title }}</h4>
+                                        </a>
                                     </div>
                                     <div class="course_text">{{ $theNews->summary }} [...]</div>
                                     <div class="course_footer d-flex align-items-center justify-content-end">
-                                        <a href="/news/{{ $theNews->endPoint }}" title="Clique aqui para ler esta notícia">Ler esta notícia <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <a href="/news/{{ $theNews->endPoint }}"
+                                            title="Clique aqui para ler esta notícia">Ler esta notícia <i
+                                                class="fa fa-angle-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -140,8 +137,10 @@
         <div class="row">
             <div class="col">
                 <p style="margin-top: 30px;">
-                    Anualmente a CEIE realiza uma Reunião Plenária durante o SBIE, onde são eleitos o novo coordenador e o
-                    comitê assessor da CEIE, para um período de 1 ano. Conheça a seguir os integrantes do comitê gestor atual
+                    Anualmente a CEIE realiza uma Reunião Plenária durante o SBIE, onde são eleitos o novo coordenador e
+                    o
+                    comitê assessor da CEIE, para um período de 1 ano. Conheça a seguir os integrantes do comitê gestor
+                    atual
                 </p>
             </div>
         </div>
@@ -153,14 +152,20 @@
             <!-- Teachers -->
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="teacher">
-                        <a href="http://lattes.cnpq.br/{{ $theStaff->lattesId }}" target="_blank" title="Acessar o currículo Lattes de {{ $theStaff->name }}">
-                            <div class="teacher_image">
-                                <img src="{{ $theStaff->thumbnail }}" alt="https://unsplash.com/@rawpixel">
-                            </div>
-                        </a>
+                    <a href="http://lattes.cnpq.br/{{ $theStaff->lattesId }}" target="_blank"
+                        title="Acessar o currículo Lattes de {{ $theStaff->name }}">
+                        <div class="teacher_image">
+                            <img src="{{ $theStaff->thumbnail }}" alt="https://unsplash.com/@rawpixel">
+                        </div>
+                    </a>
                     <div class="teacher_body text-center">
-                    <div class="teacher_title"><a href="http://lattes.cnpq.br/{{ $theStaff->lattesId }}" target="_blank" title="Acessar o currículo Lattes de {{ $theStaff->name }}">{{ $theStaff->name }}</a></div>
-                        <div class="teacher_subtitle"><a href="{{ $theStaff->institution->homePage }}" target="_blank" title="Accessar home page da {{ $theStaff->institution->name }}">{{ $theStaff->institution->shortName }}</a></div>
+                        <div class="teacher_title"><a href="http://lattes.cnpq.br/{{ $theStaff->lattesId }}"
+                                target="_blank"
+                                title="Acessar o currículo Lattes de {{ $theStaff->name }}">{{ $theStaff->name }}</a>
+                        </div>
+                        <div class="teacher_subtitle"><a href="{{ $theStaff->institution->homePage }}" target="_blank"
+                                title="Accessar home page da {{ $theStaff->institution->name }}">{{ $theStaff->institution->shortName }}</a>
+                        </div>
                         <div class="teacher_subtitle">{{ $theStaff->role }}</div>
                     </div>
                 </div>
@@ -170,21 +175,69 @@
 
         </div>
     </div>
-
-    {{-- <div class="row">
-        <div class="col text-center">
-            <div class="button teachers_button">
-                <a href="#">see all teachers
-                    <div class="button_arrow">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div> --}}
 </div>
 
 
-@include('contact')
+<div class="contact">
+    <div class="container-fluid">
+        <div class="row row-xl-eq-height">
+            <!-- Contact Content -->
+            <div class="col-xl-12">
+                <div class="contact_content">
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-2">
+                            <div class="contact_about">
+                                <div class="section_title">Contato</div>
+                                <div class="contact_about_text">
+                                    <p>Deixe aqui a sua mensagem, entraremos em contato assim que possível</p>
+                                </div>
+                                <div class="contact_form_container">
+                                    <form action="#" id="contact_form" class="contact_form">
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-lg-6 contact_name_col">
+                                                    <input type="text" class="contact_input" placeholder="Nome" name="contact_name">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="contact_input" placeholder="E-mail" name="contact_email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <input type="text" class="contact_input" placeholder="Assunto" name="contact_message_subject">
+                                        </div>
+                                        <div>
+                                            <textarea class="contact_input contact_textarea" placeholder="Mensagem" name="contact_message_content"></textarea>
+                                        </div>
+
+                                        <div>
+                                            <div class="row">
+                                                <div class="col text-center">
+                                                    <div class="button float-right">
+                                                        <a href="javascript:void(0);" id="contact_send">Enviar
+                                                            <div class="button_arrow" id="contact_button_arrow">
+                                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                                            </div>
+
+                                                            <div class="button_arrow d-none" style="padding-top: 5px;" id="contact_button_loading">
+                                                                    <div class="spinner-border text-warning" role="status"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection

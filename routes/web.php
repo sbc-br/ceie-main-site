@@ -13,12 +13,14 @@
 
 Route::get('/', 'HomeController@show');
 
-Route::group(['prefix' => 'news'], function ()
-{
+Route::group(['prefix' => 'news'], function () {
     Route::get('/', ['uses' => 'NewsController@show']);
 
     Route::get('/{endPoint}', ['uses' => 'NewsController@showByEndPoint']);
 });
 
-
-Route::get('/email', 'MailController@send');
+if (env('APP_ENV') === 'local') {
+    Route::group(['prefix' => 'contact'], function () {
+        Route::get('/testEmail', 'ContactController@testEmail');
+    });
+}

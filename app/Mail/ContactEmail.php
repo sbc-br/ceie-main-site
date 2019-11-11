@@ -6,26 +6,41 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Str;
 
-class ContactEmail extends Mailable //implements ShouldQueue
+use App\Mail\Inline;
+
+class ContactEmail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public $theName;
-    public $theEmail;
-    public $theSubject;
-    public $theMessage;
+    public $admin;
+    public $guest;
 
-    public function __construct($theName, $theEmail, $theSubject, $theMessage)
+    public $inline;
+    public $portalLink;
+
+
+    public function __construct($guest)
     {
-        $this->theName = $theName;
-        $this->theEmail = $theEmail;
-        $this->theSubject = $theSubject;
-        $this->theMessage = $theMessage;
+        $this->guest = $guest;
+
+        $this->admin = (object) [
+            'name' =>  Config::get('app.admin.name'),
+            'email' => Config::get('app.admin.email')
+        ];
+
+        $this->inline = new Inline;
+
+        $this->portalLink = url('/');
     }
 
     public function build()
     {
-        return $this->from('portal@ceie-br.org')->view('emails.contact');
+        return $this->view('emails.contact')
+            ->from(Config::get('mail.from.address'))
+            ->subject($this->guest->message->subject)
+            ->replyTo($this->guest->email);
     }
 }

@@ -16,7 +16,7 @@
             Oásis Atlântico, Fortaleza/CE. O tema será: Informática na Educação - Educação e Empreendedorismo
         </p>
         <p>
-            Para maiores informações acesse: <a href="http://cbie2018.virtual.ufc.br">http://cbie2018.virtual.ufc.br</a>
+            Para maiores informações acesse: <a href="http://cbie2018.virtual.ufc.br" target="_blank">http://cbie2018.virtual.ufc.br</a>
         </p>
     </div>
     <div class="col-lg-5">

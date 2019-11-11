@@ -60,7 +60,7 @@
                                 <!-- Navbar logo -->
 
                                 <div class="logo_container">
-                                    <a href="index.html">
+                                    <a href="/home">
                                         <div class="logo_content d-flex flex-row align-items-end justify-content-start">
                                             <div class="logo_img"><img
                                                     src="{{  URL::asset('images/logo/full_logo.svg') }}" alt=""></div>

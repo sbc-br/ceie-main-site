@@ -38,11 +38,25 @@
                         <div class="news_post_author"><strong>Palavras-chave:</strong> {{ $theNews->keywords }}</div>
 
                     </div>
+                    <div class="news_post_footer d-flex align-items-center justify-content-end">
+                            <a href="/news/{{ $theNews->endPoint }}"
+                                title="Clique aqui para ler esta notícia">Ler esta notícia <i
+                                    class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+
                 </div>
 
                 @endforeach
 
             </div>
+            <div class="row back_button">
+                    <div class="col text-right">
+                        <div class="button"><a href="/">Voltar ao Início
+                                <div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>
         </div>
     </div>
 </div>

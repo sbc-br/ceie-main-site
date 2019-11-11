@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function show()
     {
-        $lastNews = News::findLast();
+        $lastNews = News::findLast(6);
         $currentStaff = Staff::findCurrent();
         $pageData = $this->getPageData();
 
@@ -18,6 +18,7 @@ class HomeController extends Controller
 
             'page'  =>  $pageData,
             'news'  =>  $lastNews,
+            'newsFixBorder' => [4],
             'staff' =>  $currentStaff
         ];
 

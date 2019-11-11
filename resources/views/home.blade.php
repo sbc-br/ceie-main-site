@@ -44,10 +44,13 @@
                         @foreach ($news as $theNews)
 
                         <!-- Slider Item -->
-                        <div class="owl-item">
+                        <div class="owl-item {{ in_array($theNews->id, $newsFixBorder)? 'course_fix_border':'' }}">
                             <div class="course">
-                                <div class="course_image"><img src="{{ $theNews->thumbnail }}"
-                                        alt="{{ $theNews->summary }}"></div>
+                                <div class="course_image">
+                                    <a href="/news/{{ $theNews->endPoint }}" title="Clique aqui para ler esta notícia">
+                                        <img src="{{ $theNews->thumbnail }}" alt="{{ $theNews->summary }}">
+                                    </a>
+                                    </div>
                                 <div class="course_body">
                                     <div class="course_title">
                                         <a href="/news/{{ $theNews->endPoint }}"
@@ -70,9 +73,9 @@
                 </div>
 
                 <!-- Courses Slider Nav -->
-                <div class="courses_slider_nav courses_slider_prev trans_200"><i class="fa fa-angle-left"
+                <div class="courses_slider_nav courses_slider_prev trans_200" title="Rolar para a esquerda"><i class="fa fa-angle-left"
                         aria-hidden="true"></i></div>
-                <div class="courses_slider_nav courses_slider_next trans_200"><i class="fa fa-angle-right"
+                <div class="courses_slider_nav courses_slider_next trans_200" title="Rolar para a direita"><i class="fa fa-angle-right"
                         aria-hidden="true"></i></div>
 
             </div>

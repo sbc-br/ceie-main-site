@@ -31,6 +31,14 @@ class News
             'keywords' => 'Alexandre Direne, Homenagem',
             'publicationDate' => '28/11/2017',
             'endPoint' => 'homenagem-prof-alexandre-direne'
+        ],
+        [
+            'id' => 4,
+            'title' => 'CBIE 2019',
+            'summary' => 'O CBIE 2019 será realizado nos dias 11 a 14 de novembro em Brasília e congregará palestrantes',
+            'keywords' => 'CBIE 2019, Computação, Diversidade, Inclusão, Inovação',
+            'publicationDate' => '11/11/2019',
+            'endPoint' => 'cbie-2019'
         ]
     ];
 
@@ -87,10 +95,10 @@ class News
         }
     }
 
-    public static function findLast()
+    public static function findLast($count = 3)
     {
         $data = self::getData();
-        $data = array_slice($data, 0, 3);
+        $data = array_slice($data, 0, $count);
 
         return $data;
     }

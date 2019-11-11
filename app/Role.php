@@ -31,7 +31,7 @@ class Role
         [
             'id' => 5,
             'name' => 'ASSOCIATE_EDITOR',
-            'title' => 'Editor(a) Associado'
+            'title' => 'Editor(a) Associad(o)'
         ]
     ];
 

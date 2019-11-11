@@ -31,6 +31,10 @@
     --font-size4: 24px;
 }
 
+html {
+    background-color: var(--background4);
+}
+
 *
 {
 	margin: 0;
@@ -1606,7 +1610,6 @@ section
 {
     margin-bottom: 5px;
 }
-
 .news_post_title a
 {
 	font-size: var(--font-size3);
@@ -1643,7 +1646,25 @@ section
 {
 	color: #ff6600;
 }
+.news_reading
+{
+    margin-top: 20px;
+    min-height: 60vh;
+}
+.news_content
+{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: justify;
+    word-spacing: -1.6px;
+    /* text-justify: distribute; */
+    /* text-align-last: left; */
+}
 
+.news_content p:not(:last-of-type)
+{
+    margin-bottom: 40px;
+}
 /*********************************
 12. Video
 *********************************/

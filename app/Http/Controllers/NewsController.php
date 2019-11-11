@@ -24,7 +24,6 @@ class NewsController extends Controller
 
     public function showByEndPoint($endPoint)
     {
-        print_r($endPoint);
         $theNews = News::findByEndPoint($endPoint);
 
         $pageData = $this->getNewsPageData($theNews);

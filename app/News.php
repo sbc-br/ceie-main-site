@@ -12,7 +12,7 @@ class News
             'id' => 2,
             'title' => 'Lançamento de Livros',
             'summary' => 'No CBIE 2018, na quarta, 31/out, 18:00, haverá o lançamento da Série de Livro de Metodologia de Pesquisa',
-            'keywords' => 'Livros, Educação, SBC, Sociedade Brasileira de Computação, CBIE',
+            'keywords' => 'Livros, Educação, Pesquisa, CBIE',
             'publicationDate' => '29/10/2018',
             'endPoint' => 'lancamento-livros-ie-2018'
         ],
@@ -20,7 +20,7 @@ class News
             'id' => 1,
             'title' => 'CBIE 2018',
             'summary' => 'O CBIE 2018 será realizado nos dias 29 de outubro a 01 de novembro de 2018, no hotel Oásis Atlântico',
-            'keywords' => 'Livros, Educação, SBC, Sociedade Brasileira de Computação, CBIE',
+            'keywords' => 'CBIE, Congresso',
             'publicationDate' => '29/10/2018',
             'endPoint' => 'cbie-2018'
         ],

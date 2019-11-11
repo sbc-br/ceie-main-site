@@ -51,7 +51,7 @@
             </div>
             <div class="row back_button">
                     <div class="col text-right">
-                        <div class="button"><a href="/">Voltar ao Início
+                        <div class="button"><a href="/" title="Clique aqui para voltar à página inicial do portal">Voltar ao Início
                                 <div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i>
                                 </div>
                             </a></div>

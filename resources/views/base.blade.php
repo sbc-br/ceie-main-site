@@ -60,7 +60,7 @@
                                 <!-- Navbar logo -->
 
                                 <div class="logo_container">
-                                    <a href="/home">
+                                    <a href="/home" title="Clique aqui para voltar à página inicial do portal">
                                         <div class="logo_content d-flex flex-row align-items-end justify-content-start">
                                             <div class="logo_img"><img
                                                     src="{{  URL::asset('images/logo/full_logo.svg') }}" alt=""></div>
@@ -73,13 +73,16 @@
                                 <nav class="main_nav_contaner ml-auto">
                                     <ul class="main_nav">
                                         <li class="{{ Str::endsWith($page->url, '/home')? 'active' : '' }}">
-                                            <a href="/home">Início</a>
+                                            <a href="/home"
+                                                title="Clique aqui para voltar à página inicial do portal">Início</a>
                                         </li>
-                                        <li class="{{ (Str::endsWith($page->url, '/news') || Str::contains($page->url, '/news/'))? 'active' : '' }}">
-                                            <a href="/news">Notícias</a>
+                                        <li
+                                            class="{{ (Str::endsWith($page->url, '/news') || Str::contains($page->url, '/news/'))? 'active' : '' }}">
+                                            <a href="/news"
+                                                title="Clique aqui para ver uma lista com todas as notícias">Notícias</a>
                                         </li>
                                         {{-- <li class="{{ Str::endsWith($page->url, '/documents')? 'active' : '' }}">
-                                            <a href="/documents">Documentos</a>
+                                        <a href="/documents">Documentos</a>
                                         </li>
                                         <li class="{{ Str::endsWith($page->url, '/links')? 'active' : '' }}">
                                             <a href="/links">Links</a>
@@ -183,7 +186,18 @@
                     <p>Modal body text goes here.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+                    <button type="button" class="button" style="min-width: 10px;" data-dismiss="modal"> <a style="padding-right: 20px;" href="javascript:void(0);">OK</a></button>
+                    {{-- <div class="row">
+                        <div class="col text-right">
+                            <div class="button text-center" style="min-width: 30px;" data-dismiss="modal"
+                                title="Clique aqui para ler na íntegra o regimento da CEIE">
+                                <a href="javascript:void(0);">
+                                    OK <div class="button_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

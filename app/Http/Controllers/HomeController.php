@@ -12,6 +12,7 @@ class HomeController extends Controller
     {
         $lastNews = News::findLast(6);
         $ceiePortal = Portal::findByNameIgnoreCase('ceie');
+        $rbiePortal = Portal::findByNameIgnoreCase('rbie');
         $pageData = $this->getPageData();
 
         $variables = [
@@ -19,7 +20,8 @@ class HomeController extends Controller
             'page'  =>  $pageData,
             'news'  =>  $lastNews,
             'newsFixBorder' => [4],
-            'ceiePortal' =>  $ceiePortal
+            'ceiePortal' =>  $ceiePortal,
+            'rbiePortal' =>  $rbiePortal
         ];
 
         return view('home', $variables);

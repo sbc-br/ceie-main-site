@@ -21,7 +21,7 @@ class Role
         [
             'id' => 3,
             'name' => 'MEMBER',
-            'title' => 'Integrante do Comitê Gestor'
+            'title' => 'Membro da Comissão'
         ],
         [
             'id' => 4,

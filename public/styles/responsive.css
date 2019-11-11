@@ -216,8 +216,12 @@
     }
     .home
 	{
-		height: 370px;
-	}
+        height: 170px;
+    }
+    .home_container
+    {
+        bottom: 37px;
+    }
 	.home_title
 	{
 		font-size: 30pt;
@@ -334,29 +338,13 @@
 		transform: translateY(-1px);
     }
 
-    /* .home
+    .home
 	{
-		height: 260px;
+		height: 130px;
 	}
 	.home_container
 	{
-		bottom: 71px;
-	}
-	.home_title
-	{
-		font-size: 24px;
-	} */
-
-	.home_container
-	{
-		top: calc((100vh + 37px) / 2);
-		-webkit-transform: translateY(-50%);
-		-moz-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		-o-transform: translateY(-50%);
-		transform: translateY(-50%);
-		left: 0;
-		width: 100%;
+		bottom: 29px;
 	}
 	.home_title
 	{

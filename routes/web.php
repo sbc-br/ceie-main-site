@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', 'HomeController@show');
+Route::redirect('/', '/home');
+
+Route::get('/home', 'HomeController@show');
 
 Route::group(['prefix' => 'news'], function () {
+
     Route::get('/', ['uses' => 'NewsController@show']);
 
     Route::get('/{endPoint}', ['uses' => 'NewsController@showByEndPoint']);

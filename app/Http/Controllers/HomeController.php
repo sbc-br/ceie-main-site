@@ -35,7 +35,8 @@ class HomeController extends Controller
             'keywords'          => 'Informática, Educação, Computação',
             'thumbnail'         => url()->asset('images/thumbnail.jpg'),
             'siteName'          => 'CEIE - Comissão Especial de Informática na Educação',
-            'author'            => 'SBC - Sociedade Brasileira de Computação'
+            'author'            => 'SBC - Sociedade Brasileira de Computação',
+            'welcomeMessage'    => 'Bem vindo ao portal da CEIE'
         ];
     }
 }

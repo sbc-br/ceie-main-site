@@ -4,17 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\News;
-use Url;
 
 class NewsController extends Controller
 {
     public function show()
     {
+        $news = News::all();
         $pageData = $this->getIndexPageData();
+
 
         $variables = [
 
-            'page'      => $pageData
+            'page'      => $pageData,
+            'news'  =>  $news
         ];
 
         return view('news/index', $variables);
@@ -22,7 +24,9 @@ class NewsController extends Controller
 
     public function showByEndPoint($endPoint)
     {
+        print_r($endPoint);
         $theNews = News::findByEndPoint($endPoint);
+
         $pageData = $this->getNewsPageData($theNews);
 
         $variables = [
@@ -45,7 +49,8 @@ class NewsController extends Controller
             'keywords'          => 'CEIE, Notícias',
             'thumbnail'         => '',
             'siteName'          => 'CEIE - Comissão Especial de Informática na Educação',
-            'author'            => 'SBC - Sociedade Brasileira de Computação'
+            'author'            => 'SBC - Sociedade Brasileira de Computação',
+            'welcomeMessage'    => 'Notícias'
         ];
     }
 

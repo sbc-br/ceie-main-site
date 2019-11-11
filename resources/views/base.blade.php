@@ -72,11 +72,19 @@
 
                                 <nav class="main_nav_contaner ml-auto">
                                     <ul class="main_nav">
-                                        <li class="active"><a href="/">Início</a></li>
-                                        <li><a href="/news">Notícias</a></li>
-                                        <li><a href="/documents">Documentos</a></li>
-                                        <li><a href="/links">Links</a></li>
-                                        <li><a href="/contact">Contato</a></li>
+                                        <li class="{{ Str::endsWith($page->url, '/home')? 'active' : '' }}">
+                                            <a href="/home">Início</a>
+                                        </li>
+                                        <li class="{{ (Str::endsWith($page->url, '/news') || Str::contains($page->url, '/news/'))? 'active' : '' }}">
+                                            <a href="/news">Notícias</a>
+                                        </li>
+                                        {{-- <li class="{{ Str::endsWith($page->url, '/documents')? 'active' : '' }}">
+                                            <a href="/documents">Documentos</a>
+                                        </li>
+                                        <li class="{{ Str::endsWith($page->url, '/links')? 'active' : '' }}">
+                                            <a href="/links">Links</a>
+                                        </li> --}}
+                                        {{-- <li><a href="/contact">Contato</a></li> --}}
                                     </ul>
 
                                     <!-- Hamburger -->
@@ -105,25 +113,22 @@
             </div>
             <nav class="menu_nav">
                 <ul class="menu_mm">
-                    <li class="menu_mm"><a href="/">Início</a></li>
+                    <li class="menu_mm"><a href="/home">Início</a></li>
                     <li class="menu_mm"><a href="/news">Notícias</a></li>
-                    <li class="menu_mm"><a href="/documents">Documentos</a></li>
-                    <li class="menu_mm"><a href="/links">Links</a></li>
-                    <li class="menu_mm"><a href="/contact">Contato</a></li>
+                    {{-- <li class="menu_mm"><a href="/documents">Documentos</a></li>
+                    <li class="menu_mm"><a href="/links">Links</a></li> --}}
+                    {{-- <li class="menu_mm"><a href="/contact">Contato</a></li> --}}
                 </ul>
             </nav>
         </div>
 
         <div class="home">
-            <!-- Background image artist https://unsplash.com/@thepootphotographer -->
-            <div class="home_background parallax_background parallax-window" data-parallax="scroll"
-                data-image-src="{{ URL::asset('images/other/about.jpg') }}" data-speed="0.8"></div>
             <div class="home_container">
                 <div class="container">
                     <div class="row">
                         <div class="col">
                             <div class="home_content text-center">
-                                <div class="home_title">Bem vindo ao portal da CEIE</div>
+                                <div class="home_title">{{ $page->welcomeMessage }}</div>
                             </div>
                         </div>
                     </div>

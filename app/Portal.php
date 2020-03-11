@@ -56,7 +56,7 @@ class Portal
                         ['id' => 18, 'role' => 3],
                         ['id' => 14, 'role' => 3],
                         ['id' => 31, 'role' => 3],
-                        ['id' => 32, 'role' => 3],
+                        ['id' => 11, 'role' => 3],
                         ['id' => 21, 'role' => 3],
                         ['id' => 2, 'role' => 3]
                     ]

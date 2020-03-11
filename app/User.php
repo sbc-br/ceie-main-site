@@ -70,7 +70,7 @@ class User
         ],
         [
             'id' => 11,
-            'name' => 'Patrícia Tedesco',
+            'name' => 'Patricia Cabral De Azevedo R. Tedesco',
             'lattesId' => '7465148175791735',
             'institution_id' => 9
         ],
@@ -192,13 +192,7 @@ class User
             'id' => 31,
             'name' => 'Leticia Lopes Leite',
             'lattesId' => '5391157899861763',
-            'institution_id' => 25,
-        ],
-		[
-            'id' => 32,
-            'name' => 'Patricia Cabral De Azevedo R. Tedesco',
-            'lattesId' => '7465148175791735',
-            'institution_id' => 9,
+            'institution_id' => 25
         ]
     ];
 

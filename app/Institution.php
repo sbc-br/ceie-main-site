@@ -131,6 +131,30 @@ class Institution
             'name' => 'Universidade Federal Rural de Pernambuco',
             'shortName' => 'UFRPE',
             'homePage' => 'http://www.ufrpe.br'
+        ],
+        [
+            'id' => 22,
+            'name' => 'Universidade de Passo Fundo',
+            'shortName' => 'UPF',
+            'homePage' => 'http://www.upf.br'
+        ],
+        [
+            'id' => 23,
+            'name' => 'Universidade do Vale do Itajaí',
+            'shortName' => 'UNIVALI',
+            'homePage' => 'http://www.univali.br'
+        ],
+        [
+            'id' => 24,
+            'name' => 'Universidade Federal do Rio de Janeiro',
+            'shortName' => 'UFRJ',
+            'homePage' => 'http://www.ufrj.br'
+        ],
+        [
+            'id' => 25,
+            'name' => 'Universidade de Brasília',
+            'shortName' => 'UnB',
+            'homePage' => 'http://www.unb.br'
         ]
     ];
 

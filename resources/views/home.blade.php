@@ -141,21 +141,20 @@
         <div class="row">
             <div class="col">
                 <p style="margin-top: 30px; margin-bottom: 30px;">
-                    Anualmente a CEIE realiza uma Reunião Plenária durante o SBIE na qual
-                    são definidas as comissões gestoras da
-                    <a href="{{ $ceiePortal->homePage }}">CEIE</a> e da
-                    <a href="{{ $rbiePortal->homePage }}" target="_blank">RBIE</a>,
-                    para o próximo período de 1 ano.
-
-                    A última reunião foi realizada no dia <strong>30/10/2018 às 19 horas</strong> e elegeu as atuais comissões.
-                    A seguir você pode conhecer os representantes e verificar a ata da reunião.
+                    Anualmente a CEIE realiza uma Reunião Plenária durante o CBIE na qual
+                    é definido o comitê gestor da
+                    <a href="{{ $ceiePortal->homePage }}">CEIE</a> e a equipe editorial da 
+                    <a href="{{ $rbiePortal->homePage }}" target="_blank">RBIE</a> para o próximo período de 1 ano.
+                    
+                    A última reunião foi realizada no dia <strong>14/11/2019 às 08:30 horas</strong> e elegeu o atual comitê gestor da CEIE. A última eleição para a comissão da RBIE foi realizada no dia <strong>30/10/2018 às 19 horas</strong>.
+                    <br/><br/>A seguir você pode conhecer os representantes e verificar a ata da reunião.
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col text-right">
                 <div class="button text-center" title="Clique aqui para ler na íntegra a ata da última reunião">
-                    <a href="{{ URL::asset('files/ATACEIE2018.pdf') }}" target="_blank">Ler ata <div
+                    <a href="{{ URL::asset('files/ATACEIE2019.pdf') }}" target="_blank">Ler ata 2019<div
                             class="button_arrow">
                             <i class="fa fa-angle-right" aria-hidden="true"></i>
                         </div>
@@ -250,7 +249,7 @@
                             <div class="contact_about">
                                 <div class="section_title">Contato</div>
                                 <div class="contact_about_text">
-                                    <p>Deixe aqui a sua mensagem, entraremos em contato assim que possível</p>
+                                    <p>Deixe aqui a sua mensagem que entraremos em contato assim que possível.</p>
                                 </div>
                                 <div class="contact_form_container">
                                     <form action="#" id="contact_form" class="contact_form">

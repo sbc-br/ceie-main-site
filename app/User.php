@@ -16,7 +16,7 @@ class User
         ],
         [
             'id' => 2,
-            'name' => 'Thais Castro',
+            'name' => 'Thais Helena Chaves de Castro',
             'lattesId' => '9337143918677200',
             'institution_id' => 2,
         ],
@@ -28,7 +28,7 @@ class User
         ],
         [
             'id' => 4,
-            'name' => 'Tiago Primo',
+            'name' => 'Tiago Thompsen Primo',
             'lattesId' => '5641514282351546',
             'institution_id' => 4
         ],
@@ -40,13 +40,13 @@ class User
         ],
         [
             'id' => 6,
-            'name' => 'Crediné de Menezes',
+            'name' => 'Crediné Silva de Menezes',
             'lattesId' => '5454484334693909',
             'institution_id' => 6
         ],
         [
             'id' => 7,
-            'name' => 'Esdras Bispo Jr',
+            'name' => 'Esdras Lins Bispo Junior',
             'lattesId' => '1022072289836952',
             'institution_id' => 7
         ],
@@ -88,7 +88,7 @@ class User
         ],
         [
             'id' => 14,
-            'name' => 'José Aires',
+            'name' => 'José Aires de Castro Filho',
             'lattesId' => '1001172700194924',
             'institution_id' => 11,
         ],
@@ -100,7 +100,7 @@ class User
         ],
         [
             'id' => 16,
-            'name' => 'Bruno Gadelha',
+            'name' => 'Bruno Freitas Gadelha',
             'lattesId' => '4987487225451219',
             'institution_id' => 2
         ],
@@ -136,7 +136,7 @@ class User
         ],
         [
             'id' => 22,
-            'name' => 'Isabel Nunes',
+            'name' => 'Isabel Dillmann Nunes',
             'lattesId' => '2087785677186785',
             'institution_id' => 14
         ],
@@ -169,6 +169,36 @@ class User
             'name' => 'Taciana Pontual Falcão',
             'lattesId' => '5706959249737319',
             'institution_id' => 21
+        ],
+		[
+            'id' => 28,
+            'name' => 'Adriano Canabarro Teixeira',
+            'lattesId' => '1841882790688813',
+            'institution_id' => 22
+        ],
+		[
+            'id' => 29,
+            'name' => 'André Luís Alice Raabe',
+            'lattesId' => '3163271519013006',
+            'institution_id' => 23
+        ],
+		[
+            'id' => 30,
+            'name' => 'Claudia Lage Rebello da Motta',
+            'lattesId' => '0774464575739440',
+            'institution_id' => 24
+        ],
+		[
+            'id' => 31,
+            'name' => 'Leticia Lopes Leite',
+            'lattesId' => '5391157899861763',
+            'institution_id' => 25,
+        ],
+		[
+            'id' => 32,
+            'name' => 'Patricia Cabral De Azevedo R. Tedesco',
+            'lattesId' => '7465148175791735',
+            'institution_id' => 9,
         ]
     ];
 

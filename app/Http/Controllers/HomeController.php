@@ -39,7 +39,7 @@ class HomeController extends Controller
             'thumbnail'         => url()->asset('images/thumbnail.jpg'),
             'siteName'          => 'CEIE - Comissão Especial de Informática na Educação',
             'author'            => 'SBC - Sociedade Brasileira de Computação',
-            'welcomeMessage'    => 'Bem vindo ao portal da CEIE'
+            'welcomeMessage'    => 'Seja bem-vindo(a) ao portal da CEIE!'
         ];
     }
 }

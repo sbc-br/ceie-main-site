@@ -155,6 +155,12 @@ class Institution
             'name' => 'Universidade de Brasília',
             'shortName' => 'UnB',
             'homePage' => 'http://www.unb.br'
+        ],
+        [
+            'id' => 26,
+            'name' => 'Durham University, Reino Unido',
+            'shortName' => 'Durham University',
+            'homePage' => 'https://www.dur.ac.uk'
         ]
     ];
 

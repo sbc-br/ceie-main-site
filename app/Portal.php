@@ -52,7 +52,6 @@ class Portal
                         ['id' => 6, 'role' => 3],
                         ['id' => 17, 'role' => 3],
                         ['id' => 7, 'role' => 3],
-                        ['id' => 22, 'role' => 3],
                         ['id' => 18, 'role' => 3],
                         ['id' => 14, 'role' => 3],
                         ['id' => 31, 'role' => 3],
@@ -74,7 +73,9 @@ class Portal
                     'year' => 2019,
                     'members' => [
                         ['id' => 18, 'role' => 4],
+                        ['id' => 32, 'role' => 5],
                         ['id' => 25, 'role' => 5],
+                        ['id' => 33, 'role' => 5],
                         ['id' => 3, 'role' => 5],
                         ['id' => 26, 'role' => 5],
                         ['id' => 27, 'role' => 5],

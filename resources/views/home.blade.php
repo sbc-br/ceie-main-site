@@ -143,9 +143,9 @@
                 <p style="margin-top: 30px; margin-bottom: 30px;">
                     Anualmente a CEIE realiza uma Reunião Plenária durante o CBIE na qual
                     é definido o comitê gestor da
-                    <a href="{{ $ceiePortal->homePage }}">CEIE</a> e a equipe editorial da 
+                    <a href="{{ $ceiePortal->homePage }}">CEIE</a> e a equipe editorial da
                     <a href="{{ $rbiePortal->homePage }}" target="_blank">RBIE</a> para o próximo período de 1 ano.
-                    
+
                     A última reunião foi realizada no dia <strong>14/11/2019 às 08:30 horas</strong> e elegeu o atual comitê gestor da CEIE. A última eleição para a comissão da RBIE foi realizada no dia <strong>30/10/2018 às 19 horas</strong>.
                     <br/><br/>A seguir você pode conhecer os representantes e verificar a ata da reunião.
                 </p>
@@ -164,7 +164,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="section_title">Comissão da CEIE</div>
+                <div class="section_title">Comitê Gestor da CEIE</div>
             </div>
         </div>
         <div class="row teachers_row">

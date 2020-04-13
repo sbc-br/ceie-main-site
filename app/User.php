@@ -18,7 +18,7 @@ class User
             'id' => 2,
             'name' => 'Thais Helena Chaves de Castro',
             'lattesId' => '9337143918677200',
-            'institution_id' => 2,
+            'institution_id' => 2
         ],
         [
             'id' => 3,
@@ -90,7 +90,7 @@ class User
             'id' => 14,
             'name' => 'José Aires de Castro Filho',
             'lattesId' => '1001172700194924',
-            'institution_id' => 11,
+            'institution_id' => 11
         ],
         [
             'id' => 15,
@@ -193,6 +193,18 @@ class User
             'name' => 'Leticia Lopes Leite',
             'lattesId' => '5391157899861763',
             'institution_id' => 25
+        ],
+		[
+            'id' => 32,
+            'name' => 'Alexandra Cristea',
+            'lattesId' => '',
+            'institution_id' => 26
+        ],
+		[
+            'id' => 33,
+            'name' => 'Elaine Harada Teixeira de Oliveira',
+            'lattesId' => '6553721651836761',
+            'institution_id' => 2
         ]
     ];
 
